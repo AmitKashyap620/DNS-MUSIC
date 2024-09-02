@@ -140,7 +140,7 @@ async def braodcast_message(client, message, _):
         try:
             await ok.delete()
             await message.reply_text(_["broad_1"].format(sent, pin))
-            await save_broadcast_stats(sent, 0)  # Save sent count, no users
+            #e sent count, no users
         except:
             pass
 
@@ -168,7 +168,7 @@ async def braodcast_message(client, message, _):
                 pass
         try:
             await message.reply_text(_["broad_7"].format(susr))
-            await save_broadcast_stats(0, susr)  # Save user count, no groups
+             #ve user count, no groups
         except:
             pass
 
