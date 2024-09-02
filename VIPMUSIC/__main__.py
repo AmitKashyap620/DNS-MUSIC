@@ -36,8 +36,9 @@ async def init():
             "No Spotify Vars defined. Your bot won't be able to play spotify queries."
         )
 
-    await app.start()
+    
     await userbot.start()
+    await app.start()
     try:
         users = await get_gbanned()
         for user_id in users:
