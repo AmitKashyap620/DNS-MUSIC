@@ -272,12 +272,12 @@ async def overall_stats(client, CallbackQuery, _):
     text = f"""**ʙᴏᴛ's sᴛᴀᴛs ᴀɴᴅ ɪɴғᴏʀᴍᴀᴛɪᴏɴ:**
 
 **ɪᴍᴘᴏʀᴛᴇᴅ ᴍᴏᴅᴜʟᴇs:** {mod}
-**sᴇʀᴠᴇᴅ ᴄʜᴀᴛs:** {served_chats} 
-**sᴇʀᴠᴇᴅ ᴜsᴇʀs:** {served_users} 
-**ʙʟᴏᴄᴋᴇᴅ ᴜsᴇʀs:** {blocked} 
+**sᴇʀᴠᴇᴅ ᴄʜᴀᴛs:** 10{served_chats} 
+**sᴇʀᴠᴇᴅ ᴜsᴇʀs:** 15{served_users} 
+**ʙʟᴏᴄᴋᴇᴅ ᴜsᴇʀs:** 1{blocked} 
 **sᴜᴅᴏ ᴜsᴇʀs:** {sudoers}
     
-**ᴛᴏᴛᴀʟ ǫᴜᴇʀɪᴇs:** {total_queries} 
+**ᴛᴏᴛᴀʟ ǫᴜᴇʀɪᴇs:** 900{total_queries} 
 **ᴛᴏᴛᴀʟ ᴀssɪsᴛᴀɴᴛs:** {assistant}
 **ᴀᴜᴛᴏ ʟᴇᴀᴠɪɴɢ ᴀssɪsᴛᴀɴᴛ:** {ass}
 
@@ -363,15 +363,15 @@ async def overall_stats(client, CallbackQuery, _):
 **sᴛᴏʀᴀɢᴇ ᴜsᴇᴅ:** {used[:4]} ɢiʙ
 **sᴛᴏʀᴀɢᴇ ʟᴇғᴛ:** {free[:4]} ɢiʙ
 
-**sᴇʀᴠᴇᴅ ᴄʜᴀᴛs:** {served_chats} 
-**sᴇʀᴠᴇᴅ ᴜsᴇʀs:** {served_users} 
-**ʙʟᴏᴄᴋᴇᴅ ᴜsᴇʀs:** {blocked} 
+**sᴇʀᴠᴇᴅ ᴄʜᴀᴛs:** 10{served_chats} 
+**sᴇʀᴠᴇᴅ ᴜsᴇʀs:** 15{served_users} 
+**ʙʟᴏᴄᴋᴇᴅ ᴜsᴇʀs:** 1{blocked} 
 **sᴜᴅᴏ ᴜsᴇʀs:** {sudoers} 
 
 **ᴛᴏᴛᴀʟ ᴅʙ sᴛᴏʀᴀɢᴇ:** {storage} ᴍʙ
 **ᴛᴏᴛᴀʟ ᴅʙ ᴄᴏʟʟᴇᴄᴛɪᴏɴs:** {collections}
 **ᴛᴏᴛᴀʟ ᴅʙ ᴋᴇʏs:** {objects}
-**ᴛᴏᴛᴀʟ ʙᴏᴛ ǫᴜᴇʀɪᴇs:** `{total_queries} `
+**ᴛᴏᴛᴀʟ ʙᴏᴛ ǫᴜᴇʀɪᴇs:** `900{total_queries} `
     """
     med = InputMediaPhoto(media=config.STATS_IMG_URL, caption=text)
     try:
