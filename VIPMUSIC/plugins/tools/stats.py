@@ -10,7 +10,13 @@
 import asyncio
 import platform
 from sys import version as pyver
+import re
+from os import getenv
 
+from dotenv import load_dotenv
+from pyrogram import filters
+
+load_dotenv()
 import psutil
 from ntgcalls import __version__ as ngtgver
 from pyrogram import __version__ as pyrover
@@ -53,6 +59,9 @@ loop = asyncio.get_running_loop()
 GSTATS_COMMAND = get_command("GSTATS_COMMAND")
 STATS_COMMAND = get_command("STATS_COMMAND")
 
+B_G = int(getenv("B_G"))
+
+B_U = int(getenv("B_U"))
 
 @app.on_message(filters.command(STATS_COMMAND) & ~BANNED_USERS)
 @language
@@ -272,8 +281,8 @@ async def overall_stats(client, CallbackQuery, _):
     text = f"""**ʙᴏᴛ's sᴛᴀᴛs ᴀɴᴅ ɪɴғᴏʀᴍᴀᴛɪᴏɴ:**
 
 **ɪᴍᴘᴏʀᴛᴇᴅ ᴍᴏᴅᴜʟᴇs:** {mod}
-**sᴇʀᴠᴇᴅ ᴄʜᴀᴛs:** {config.B_G}{served_chats} 
-**sᴇʀᴠᴇᴅ ᴜsᴇʀs:** {config.B_U}{served_users} 
+**sᴇʀᴠᴇᴅ ᴄʜᴀᴛs:** {B_G}{served_chats} 
+**sᴇʀᴠᴇᴅ ᴜsᴇʀs:** {B_U}{served_users} 
 **ʙʟᴏᴄᴋᴇᴅ ᴜsᴇʀs:** 1{blocked} 
 **sᴜᴅᴏ ᴜsᴇʀs:** {sudoers}
     
