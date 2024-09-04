@@ -18,7 +18,7 @@ from pyrogram import filters
 from pyrogram.errors import FloodWait, MessageIdInvalid
 from pyrogram.types import CallbackQuery, InputMediaPhoto, Message
 from pytgcalls.__version__ import __version__ as pytgver
-from config import B_G, B_U
+from config.config import B_G, B_U
 import config
 from config import BANNED_USERS
 from strings import get_command
