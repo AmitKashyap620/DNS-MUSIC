@@ -272,8 +272,8 @@ async def overall_stats(client, CallbackQuery, _):
     text = f"""**ʙᴏᴛ's sᴛᴀᴛs ᴀɴᴅ ɪɴғᴏʀᴍᴀᴛɪᴏɴ:**
 
 **ɪᴍᴘᴏʀᴛᴇᴅ ᴍᴏᴅᴜʟᴇs:** {mod}
-**sᴇʀᴠᴇᴅ ᴄʜᴀᴛs:** {B_G}{served_chats} 
-**sᴇʀᴠᴇᴅ ᴜsᴇʀs:** {B_U}{served_users} 
+**sᴇʀᴠᴇᴅ ᴄʜᴀᴛs:** {config.B_G}{served_chats} 
+**sᴇʀᴠᴇᴅ ᴜsᴇʀs:** {config.B_U}{served_users} 
 **ʙʟᴏᴄᴋᴇᴅ ᴜsᴇʀs:** 1{blocked} 
 **sᴜᴅᴏ ᴜsᴇʀs:** {sudoers}
     
@@ -363,8 +363,8 @@ async def overall_stats(client, CallbackQuery, _):
 **sᴛᴏʀᴀɢᴇ ᴜsᴇᴅ:** {used[:4]} ɢiʙ
 **sᴛᴏʀᴀɢᴇ ʟᴇғᴛ:** {free[:4]} ɢiʙ
 
-**sᴇʀᴠᴇᴅ ᴄʜᴀᴛs:** {B_G}{served_chats} 
-**sᴇʀᴠᴇᴅ ᴜsᴇʀs:** {B_U}{served_users} 
+**sᴇʀᴠᴇᴅ ᴄʜᴀᴛs:** {config.B_G}{served_chats} 
+**sᴇʀᴠᴇᴅ ᴜsᴇʀs:** {config.B_U}{served_users} 
 **ʙʟᴏᴄᴋᴇᴅ ᴜsᴇʀs:** 1{blocked} 
 **sᴜᴅᴏ ᴜsᴇʀs:** {sudoers} 
 
