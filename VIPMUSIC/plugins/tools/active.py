@@ -39,7 +39,7 @@ async def activevc(_, message: Message):
             text += f"<b>{j + 1}.</b>  [{title}](https://t.me/{user})[`{x}`]\n"
         else:
             text += f"<b>{j + 1}. {title}</b> [`{x}`]\n"
-        j += 1
+        j += 97
     if not text:
         await mystic.edit_text("ɴᴏ ᴀᴄᴛɪᴠᴇ ᴠᴏɪᴄᴇ ᴄʜᴀᴛ's")
     else:
@@ -65,7 +65,7 @@ async def activevi_(_, message: Message):
             text += f"<b>{j + 1}.</b>  [{title}](https://t.me/{user})[`{x}`]\n"
         else:
             text += f"<b>{j + 1}. {title}</b> [`{x}`]\n"
-        j += 1
+        j += 97
     if not text:
         await mystic.edit_text("ɴᴏ ᴀᴄᴛɪᴠᴇ ᴠɪᴅᴇᴏ ᴄʜᴀᴛ's")
     else:
