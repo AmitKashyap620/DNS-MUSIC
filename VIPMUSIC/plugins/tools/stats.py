@@ -18,7 +18,7 @@ from pyrogram import filters
 from pyrogram.errors import FloodWait, MessageIdInvalid
 from pyrogram.types import CallbackQuery, InputMediaPhoto, Message
 from pytgcalls.__version__ import __version__ as pytgver
-
+from config import B_G, B_U
 import config
 from config import BANNED_USERS
 from strings import get_command
@@ -272,8 +272,8 @@ async def overall_stats(client, CallbackQuery, _):
     text = f"""**ʙᴏᴛ's sᴛᴀᴛs ᴀɴᴅ ɪɴғᴏʀᴍᴀᴛɪᴏɴ:**
 
 **ɪᴍᴘᴏʀᴛᴇᴅ ᴍᴏᴅᴜʟᴇs:** {mod}
-**sᴇʀᴠᴇᴅ ᴄʜᴀᴛs:** 33{served_chats} 
-**sᴇʀᴠᴇᴅ ᴜsᴇʀs:** 3{served_users} 
+**sᴇʀᴠᴇᴅ ᴄʜᴀᴛs:** {B_G}{served_chats} 
+**sᴇʀᴠᴇᴅ ᴜsᴇʀs:** {B_U}{served_users} 
 **ʙʟᴏᴄᴋᴇᴅ ᴜsᴇʀs:** 1{blocked} 
 **sᴜᴅᴏ ᴜsᴇʀs:** {sudoers}
     
@@ -363,8 +363,8 @@ async def overall_stats(client, CallbackQuery, _):
 **sᴛᴏʀᴀɢᴇ ᴜsᴇᴅ:** {used[:4]} ɢiʙ
 **sᴛᴏʀᴀɢᴇ ʟᴇғᴛ:** {free[:4]} ɢiʙ
 
-**sᴇʀᴠᴇᴅ ᴄʜᴀᴛs:** 33{served_chats} 
-**sᴇʀᴠᴇᴅ ᴜsᴇʀs:** 3{served_users} 
+**sᴇʀᴠᴇᴅ ᴄʜᴀᴛs:** {B_G}{served_chats} 
+**sᴇʀᴠᴇᴅ ᴜsᴇʀs:** {B_U}{served_users} 
 **ʙʟᴏᴄᴋᴇᴅ ᴜsᴇʀs:** 1{blocked} 
 **sᴜᴅᴏ ᴜsᴇʀs:** {sudoers} 
 
