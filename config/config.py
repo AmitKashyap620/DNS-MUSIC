@@ -49,8 +49,9 @@ EXTRA_PLUGINS = getenv(
 
 # Fill True if you want to load extra plugins
 
-B_G = getenv(int("B_G", "",))
-B_U = getenv(int("B_U", "",))
+B_G = int(getenv("B_G"))
+
+B_U = int(getenv("B_U"))
 
 EXTRA_PLUGINS_REPO = getenv(
     "EXTRA_PLUGINS_REPO",
