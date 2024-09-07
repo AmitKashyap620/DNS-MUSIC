@@ -59,9 +59,9 @@ loop = asyncio.get_running_loop()
 GSTATS_COMMAND = get_command("GSTATS_COMMAND")
 STATS_COMMAND = get_command("STATS_COMMAND")
 
-B_G = int(getenv("B_G"))
+S_G = int(getenv("S_G"))
 
-B_U = int(getenv("B_U"))
+S_U = int(getenv("S_U"))
 
 @app.on_message(filters.command(STATS_COMMAND) & ~BANNED_USERS)
 @language
@@ -281,8 +281,8 @@ async def overall_stats(client, CallbackQuery, _):
     text = f"""**ʙᴏᴛ's sᴛᴀᴛs ᴀɴᴅ ɪɴғᴏʀᴍᴀᴛɪᴏɴ:**
 
 **ɪᴍᴘᴏʀᴛᴇᴅ ᴍᴏᴅᴜʟᴇs:** {mod}
-**sᴇʀᴠᴇᴅ ᴄʜᴀᴛs:** {B_G}{served_chats} 
-**sᴇʀᴠᴇᴅ ᴜsᴇʀs:** {B_U}{served_users} 
+**sᴇʀᴠᴇᴅ ᴄʜᴀᴛs:** {S_G}{served_chats} 
+**sᴇʀᴠᴇᴅ ᴜsᴇʀs:** {S_U}{served_users} 
 **ʙʟᴏᴄᴋᴇᴅ ᴜsᴇʀs:** 1{blocked} 
 **sᴜᴅᴏ ᴜsᴇʀs:** {sudoers}
     
@@ -372,8 +372,8 @@ async def overall_stats(client, CallbackQuery, _):
 **sᴛᴏʀᴀɢᴇ ᴜsᴇᴅ:** {used[:4]} ɢiʙ
 **sᴛᴏʀᴀɢᴇ ʟᴇғᴛ:** {free[:4]} ɢiʙ
 
-**sᴇʀᴠᴇᴅ ᴄʜᴀᴛs:** {config.B_G}{served_chats} 
-**sᴇʀᴠᴇᴅ ᴜsᴇʀs:** {config.B_U}{served_users} 
+**sᴇʀᴠᴇᴅ ᴄʜᴀᴛs:** {config.S_G}{served_chats} 
+**sᴇʀᴠᴇᴅ ᴜsᴇʀs:** {config.S_U}{served_users} 
 **ʙʟᴏᴄᴋᴇᴅ ᴜsᴇʀs:** 1{blocked} 
 **sᴜᴅᴏ ᴜsᴇʀs:** {sudoers} 
 
