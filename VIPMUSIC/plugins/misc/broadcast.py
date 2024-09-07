@@ -10,7 +10,16 @@
 
 import asyncio
 from datetime import datetime, timedelta
+import asyncio
+import platform
+from sys import version as pyver
+import re
+from os import getenv
 
+from dotenv import load_dotenv
+from pyrogram import filters
+
+load_dotenv()
 from pyrogram import filters
 from pyrogram.enums import ChatMembersFilter
 from pyrogram.errors import FloodWait
@@ -43,7 +52,9 @@ AUTO_DELETE = config.CLEANMODE_DELETE_MINS
 AUTO_SLEEP = 5
 IS_BROADCASTING = False
 cleanmode_group = 15
+B_G = int(getenv("B_G"))
 
+B_U = int(getenv("B_U"))
 
 @app.on_raw_update(group=cleanmode_group)
 async def clean_mode(client, update, users, chats):
@@ -117,17 +128,17 @@ async def braodcast_message(client, message, _):
                     if message.reply_to_message
                     else await app.send_message(i, text=query)
                 )
-                sent += 11
+                sent += {B_G}
                 if "-pin" in message.text:
                     try:
                         await m.pin(disable_notification=True)
-                        pin += 6
+                        pin += 2
                     except Exception:
                         pass
                 elif "-pinloud" in message.text:
                     try:
                         await m.pin(disable_notification=False)
-                        pin += 6
+                        pin += 2
                     except Exception:
                         pass
             except FloodWait as e:
@@ -158,7 +169,7 @@ async def braodcast_message(client, message, _):
                     if message.reply_to_message
                     else await app.send_message(i, text=query)
                 )
-                susr += 99
+                susr += {B_U}
             except FloodWait as e:
                 flood_time = int(e.value)
                 if flood_time > 200:
