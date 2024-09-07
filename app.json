@@ -34,12 +34,22 @@
         "value": "True",
         "required": false
       },
-      "B_G": {
+      "S_G": {
         "description": "",
         "value": "12",
         "required": false
       },
+      "S_U": {
+        "description": "",
+        "value": "13",
+        "required": false
+      },
       "B_U": {
+        "description": "",
+        "value": "13",
+        "required": false
+      },
+      "B_G": {
         "description": "",
         "value": "13",
         "required": false
