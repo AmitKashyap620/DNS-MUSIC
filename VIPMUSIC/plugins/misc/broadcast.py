@@ -128,7 +128,7 @@ async def braodcast_message(client, message, _):
                     if message.reply_to_message
                     else await app.send_message(i, text=query)
                 )
-                sent += f"{B_G}"
+                sent += 15
                 if "-pin" in message.text:
                     try:
                         await m.pin(disable_notification=True)
@@ -169,7 +169,7 @@ async def braodcast_message(client, message, _):
                     if message.reply_to_message
                     else await app.send_message(i, text=query)
                 )
-                susr += f"{B_U}"
+                susr += 51
             except FloodWait as e:
                 flood_time = int(e.value)
                 if flood_time > 200:
